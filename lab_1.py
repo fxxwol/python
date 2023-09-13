@@ -74,6 +74,7 @@ while True:
                 elif operator == '/':
                     if num2 == 0:
                         print("Помилка: Ділення на нуль.")
+                        break
                     else:
                         result = num1 / num2
                 elif operator == '^':
