@@ -33,7 +33,10 @@ def calc_memory(history):
             for entry in calculation_history:
                 num1, operator, num2, result = entry
                 if memory_option == 'calculation':
-                    print(f"{num1} {operator} {num2} = {result:.{decimal_places}f}")
+                    if(operator == '√'):
+                        print(f"{operator} {num1} = {result:.{decimal_places}f}")
+                    else:
+                        print(f"{num1} {operator} {num2} = {result:.{decimal_places}f}")
                 else:
                     print(f"{result:.{decimal_places}}")
     else:
@@ -58,7 +61,7 @@ while True:
             
             while True:
                 while True:
-                    operator = input("Введіть оператор (+, -, *, /, ^ для піднесення до степеня, √ для квадратного кореня, % для залишку від ділення): ")
+                    operator = input("Введіть оператор (+, -, *, /, ^ для піднесення до степеня, √ для квадратного кореня першого числа, % для залишку від ділення): ")
                     
                     if operator not in ['+', '-', '*', '/', '^', '√', '%']:
                         print("Невірний оператор. Будь ласка, введіть один із +, -, *, /, ^, √, %.")
@@ -85,8 +88,10 @@ while True:
                     result = num1 % num2
                 
                 calculation_history.append((num1, operator, num2, result))
-                
-                print(f"Результат: {num1} {operator} {num2} = {result:.{decimal_places}f}")
+                if(operator == '√'):
+                    print(f"Результат: {operator} {num1} = {result:.{decimal_places}f}")
+                else:
+                    print(f"Результат: {num1} {operator} {num2} = {result:.{decimal_places}f}")
                 
                 another_calculation = input("Виконати ще одне обчислення? (Так/Ні): ")
                 if another_calculation.lower() != 'так':
