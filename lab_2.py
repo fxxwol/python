@@ -75,3 +75,63 @@ class Calculator:
                 break
 
 
+class HistoryCalculator(Calculator):
+    def __init__(self):
+        """
+        Initialize a HistoryCalculator object as a subclass of Calculator, with an additional history attribute.
+        """
+        super().__init__()
+        self.history = []
+
+    def calculate(self):
+        """
+        Perform a calculation, store the full operation and result in the history.
+        """
+        num1, num2 = self.input_numbers()
+        operator = self.input_operator()
+
+        if num1 is not None and num2 is not None and operator is not None:
+            try:
+                result = None  # Initialize the result variable
+
+                if operator == '+':
+                    result = num1 + num2
+                elif operator == '-':
+                    result = num1 - num2
+                elif operator == '*':
+                    result = num1 * num2
+                elif operator == '/':
+                    if num2 == 0:
+                        print("Division by zero is not allowed.")
+                        return
+                    result = num1 / num2
+                elif operator == '^':
+                    result = num1 ** num2
+                elif operator == '√':
+                    result = num1 ** 0.5
+                elif operator == '%':
+                    result = num1 % num2
+
+                if result is not None:
+                    # Store the full operation and result in history
+                    full_operation = f"{num1} {operator} {num2} = {result}"
+                    self.history.append(full_operation)
+
+                print("Result: ", result)
+                self.result = result  # Update the result attribute
+            except Exception as e:
+                print("Error during calculation:", str(e))
+
+    def show_history(self):
+        """
+        Display the history of calculations, including the full operations.
+        """
+        print("Calculation history:")
+        for i, operation in enumerate(self.history, 1):
+            print(f"{i}: {operation}")
+
+
+if __name__ == "__main__":
+    calc = HistoryCalculator()
+    calc.run()
+    calc.show_history()
