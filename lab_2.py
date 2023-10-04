@@ -49,10 +49,11 @@ class Calculator:
                 elif operator == '*':
                     self.result = num1 * num2
                 elif operator == '/':
-                    if num2 == 0:
-                        print("Division by zero is not allowed.")
+                    try:
+                        self.result = num1 / num2
+                    except ZeroDivisionError:
+                        print("Division by 0 is not allowed")
                         return
-                    self.result = num1 / num2
                 elif operator == '^':
                     self.result = num1 ** num2
                 elif operator == '√':
