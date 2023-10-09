@@ -26,6 +26,20 @@ def choose_symbol():
 def format_ascii_art(art, symbol):
     return art.replace('#', symbol)
 
+def resize_ascii_art(ascii_art, width, height):
+    # Split the ASCII art into lines
+    lines = ascii_art.split('\n')
+
+    # Resize the ASCII art to the specified height
+    while len(lines) < height:
+        lines.append(' ' * len(lines[0]))
+
+    # Resize each line to the specified width
+    for i in range(len(lines)):
+        lines[i] = lines[i].ljust(width)[:width]
+
+    return '\n'.join(lines)
+
 def save_to_file(ascii_art):
     filename = input("Enter the filename to save the ASCII art: ")
     with open(filename, "w") as file:
@@ -42,9 +56,16 @@ def main():
     formatted_art = format_ascii_art(colored_art, symbol)
 
     print(formatted_art)
+
+    width = int(input("Enter the desired width (number of columns): "))
+    height = int(input("Enter the desired height (number of rows): "))
+    resized_art = resize_ascii_art(formatted_art, width, height)
+
+    print(resized_art)
+
     save_option = input("Do you want to save this ASCII art to a file? (yes/no): ")
     if save_option.lower() == "yes":
-        save_to_file(formatted_art)
+        save_to_file(resized_art)
 
 if __name__ == "__main__":
     main()
