@@ -8,28 +8,22 @@ class Calculator:
     def input_numbers(self):
         """
         Prompt the user to input two numbers and return them as a tuple.
-        
-        Returns:
-            tuple: A tuple containing two numbers entered by the user.
         """
         try:
-            num1 = float(input("Enter the first number: "))  # Prompt for the first number
-            num2 = float(input("Enter the second number: "))  # Prompt for the second number
+            num1 = float(input("Enter the first number: "))
+            num2 = float(input("Enter the second number: "))
             return num1, num2
         except ValueError:
-            print("Invalid input for numbers.")  # Handle invalid input
+            print("Invalid input for numbers.")
             return None
 
     def input_operator(self):
         """
         Prompt the user to input an operator and return it.
-        
-        Returns:
-            str: The operator entered by the user.
         """
-        operator = input("Enter operator (+, -, *, /, ^, √, %): ")  # Prompt for the operator
+        operator = input("Enter operator (+, -, *, /, ^, √, %): ")
         if operator not in ['+', '-', '*', '/', '^', '√', '%']:
-            print("Invalid operator.")  # Handle invalid operator
+            print("Invalid operator.")
             return None
         return operator
 
@@ -61,7 +55,7 @@ class Calculator:
                 elif operator == '%':
                     self.result = num1 % num2
 
-                print("Result: ", self.result)
+                print("Result:", self.result)
             except Exception as e:
                 print("Error during calculation:", str(e))
 
@@ -93,7 +87,7 @@ class HistoryCalculator(Calculator):
 
         if num1 is not None and num2 is not None and operator is not None:
             try:
-                result = None  # Initialize the result variable
+                result = None
 
                 if operator == '+':
                     result = num1 + num2
@@ -114,12 +108,11 @@ class HistoryCalculator(Calculator):
                     result = num1 % num2
 
                 if result is not None:
-                    # Store the full operation and result in history
                     full_operation = f"{num1} {operator} {num2} = {result}"
                     self.history.append(full_operation)
 
-                print("Result: ", result)
-                self.result = result  # Update the result attribute
+                print("Result:", result)
+                self.result = result
             except Exception as e:
                 print("Error during calculation:", str(e))
 
