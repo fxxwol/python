@@ -1,16 +1,15 @@
 from utils.input_handling import get_string_input, get_integer_input
 
-# Завдання 1: Введення користувача
 user_input = get_string_input("Введіть слово або фразу, яку ви хочете перетворити в ASCII-арт: ")
 
-# Завдання 2: Набір символів
-characters = ["@", "#", "S", "%", "?", "*", "+", ";", ":", ",", "."]
+# Characters set
+characters = ["@", "#", "%", "?", "*", "+", ";", ":", ",", "."]
 
-# Завдання 3: Розміри Art-у
+# Set size 
 width = get_integer_input("Введіть ширину ASCII-арту (від 1 до 100): ", "Розмір має бути цілим числом в межах вказаних значень.")
 height = get_integer_input("Введіть висоту ASCII-арту (від 1 до 100): ", "Розмір має бути цілим числом в межах вказаних значень.")
 
-# Завдання 4: Функція генерації Art-у
+# Generate art
 def generate_ascii_art(user_input, characters, width, height):
     ascii_art = ""
     for i in range(height):
@@ -21,12 +20,12 @@ def generate_ascii_art(user_input, characters, width, height):
         ascii_art += line + "\n"
     return ascii_art
 
-# Завдання 6: Відображення мистецтва
+# Displaying art
 art = generate_ascii_art(user_input, characters, width, height)
 print(f"{user_input} ASCII-арт:")
 print(art)
 
-# Завдання 7: Збереження у файл
+# Save to file
 while True:
     choice = get_string_input("Бажаєте зберегти ASCII-арт у файл? (Так/Ні): ").lower()
     if choice == "так":
