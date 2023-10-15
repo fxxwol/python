@@ -15,6 +15,9 @@ elif lab_name == "lab_2":
 elif lab_name == "lab_3":
     from lab_3 import main as lab_3_main
     lab_3_main()
+elif lab_name == "lab_4":
+    from lab_4 import main as lab_4_main
+    lab_4_main()
 else:
     print("Невідома лабораторна робота")
 

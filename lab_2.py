@@ -126,8 +126,7 @@ class HistoryCalculator(Calculator):
         for i, operation in enumerate(self.history, 1):
             print(f"{i}: {operation}")
 
-
-if __name__ == "__main__":
+def main():
     calc = HistoryCalculator()
     calc.run()
     calc.show_history()
