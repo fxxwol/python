@@ -1,20 +1,14 @@
+from utils.input_handling import get_string_input, get_integer_input
+
 # Завдання 1: Введення користувача
-user_input = input("Введіть слово або фразу, яку ви хочете перетворити в ASCII-арт: ")
+user_input = get_string_input("Введіть слово або фразу, яку ви хочете перетворити в ASCII-арт: ")
 
 # Завдання 2: Набір символів
 characters = ["@", "#", "S", "%", "?", "*", "+", ";", ":", ",", "."]
 
 # Завдання 3: Розміри Art-у
-while True:
-    try:
-        width = int(input("Введіть ширину ASCII-арту (від 1 до 100): "))
-        height = int(input("Введіть висоту ASCII-арту (від 1 до 100): "))
-        if 1 <= width <= 100 and 1 <= height <= 100:
-            break
-        else:
-            print("Розміри мають бути в межах вказаних значень.")
-    except ValueError:
-        print("Введіть числа.")
+width = get_integer_input("Введіть ширину ASCII-арту (від 1 до 100): ", "Розмір має бути цілим числом в межах вказаних значень.")
+height = get_integer_input("Введіть висоту ASCII-арту (від 1 до 100): ", "Розмір має бути цілим числом в межах вказаних значень.")
 
 # Завдання 4: Функція генерації Art-у
 def generate_ascii_art(user_input, characters, width, height):
@@ -34,12 +28,15 @@ print(art)
 
 # Завдання 7: Збереження у файл
 while True:
-    choice = input("Бажаєте зберегти ASCII-арт у файл? (Так/Ні): ").lower()
+    choice = get_string_input("Бажаєте зберегти ASCII-арт у файл? (Так/Ні): ").lower()
     if choice == "так":
-        filename = input("Введіть ім'я файлу для збереження ASCII-арту: ")
-        with open(filename, "w") as file:
-            file.write(art)
-        print(f"ASCII-арт збережено у файлі {filename}")
+        filename = get_string_input("Введіть ім'я файлу для збереження ASCII-арту: ")
+        try:
+            with open(filename, "w") as file:
+                file.write(art)
+            print(f"ASCII-арт збережено у файлі {filename}")
+        except Exception as e:
+            print(f"Помилка при збереженні файлу: {e}")
         break
     elif choice == "ні":
         break
