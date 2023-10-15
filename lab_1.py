@@ -1,3 +1,5 @@
+from utils.input_handling import get_float_input, get_integer_input, get_string_input
+
 calculation_history = []
 decimal_places = 2
 memory_option = 'calculation'
@@ -9,16 +11,16 @@ def settings_menu():
         print("2. Налаштування пам'яті")
         print("3. Вихід з меню налаштувань")
         
-        setting_option = input("Виберіть опцію: ")
+        setting_option = get_string_input("Виберіть опцію")
         
         if setting_option == '1':
             global decimal_places
-            decimal_places = int(input("Введіть нову кількість десяткових розрядів: "))
+            decimal_places = get_integer_input("Введіть нову кількість десяткових розрядів: ")
         elif setting_option == '2':
             print("Функція пам'яті:")
             print("1. Виводити історію результатів")
             print("2. Виводити історію обчислень")
-            option = input("Виберіть опцію (1 або 2): ")
+            option = get_string_input("Виберіть опцію (1 або 2): ")
             if option == '1':
                 global memory_option
                 memory_option = 'results'
@@ -56,12 +58,12 @@ while True:
         settings_menu()
     elif option == '2':
         while True:
-            num1 = float(input("Введіть перше число: "))
-            num2 = float(input("Введіть друге число: "))
+            num1 = get_float_input("Введіть перше число: ")
+            num2 = get_float_input("Введіть друге число: ")
             
             while True:
                 while True:
-                    operator = input("Введіть оператор (+, -, *, /, ^ для піднесення до степеня, √ для квадратного кореня першого числа, % для залишку від ділення): ")
+                    operator = get_string_input("Введіть оператор (+, -, *, /, ^ для піднесення до степеня, √ для квадратного кореня першого числа, % для залишку від ділення): ")
                     
                     if operator not in ['+', '-', '*', '/', '^', '√', '%']:
                         print("Невірний оператор. Будь ласка, введіть один із +, -, *, /, ^, √, %.")
@@ -93,12 +95,12 @@ while True:
                 else:
                     print(f"Результат: {num1} {operator} {num2} = {result:.{decimal_places}f}")
                 
-                another_calculation = input("Виконати ще одне обчислення? (Так/Ні): ")
+                another_calculation = get_string_input("Виконати ще одне обчислення? (Так/Ні): ")
                 if another_calculation.lower() != 'так':
                     break
                 else:
-                    num1 = float(input("Введіть перше число: "))
-                    num2 = float(input("Введіть друге число: "))
+                    num1 = get_float_input("Введіть перше число: ")
+                    num2 = get_float_input("Введіть друге число: ")
             break
     elif option == '3':
         calc_memory(calculation_history)

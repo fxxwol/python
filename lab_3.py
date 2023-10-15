@@ -1,9 +1,9 @@
 import pyfiglet
 from termcolor import colored
-
+from utils.input_handling import get_string_input, get_integer_input
 # Function to get user input
 def get_user_input():
-    user_input = input("Enter a word or phrase: ")
+    user_input = get_string_input("Enter a word or phrase: ")
     return user_input
 
 # Function to choose a font for ASCII art
@@ -12,19 +12,19 @@ def choose_font():
     print("Available fonts:")
     for font in available_fonts:
         print(font)
-    selected_font = input("Choose a font: ")
+    selected_font = get_string_input("Choose a font: ")
     return selected_font
 
 # Function to choose a color for ASCII art
 def choose_color():
     available_colors = ["red", "blue", "green", "yellow"]
     print("Available colors:", available_colors)
-    selected_color = input("Choose a color: ")
+    selected_color = get_string_input("Choose a color: ")
     return selected_color
 
 # Function to choose a symbol for customizing ASCII art
 def choose_symbol():
-    symbol = input("Enter a character to use for ASCII art: ")
+    symbol = get_string_input("Enter a character to use for ASCII art: ")
     return symbol
 
 # Function to format ASCII art by replacing '#' with a custom symbol
@@ -48,7 +48,7 @@ def resize_ascii_art(ascii_art, width, height):
 
 # Function to save ASCII art to a file
 def save_to_file(ascii_art):
-    filename = input("Enter the filename to save the ASCII art: ")
+    filename = get_string_input("Enter the filename to save the ASCII art: ")
     with open(filename, "w") as file:
         file.write(ascii_art)
 
@@ -69,8 +69,8 @@ def main():
     print(formatted_art)
 
     # Get user input for desired width and height
-    width = int(input("Enter the desired width (number of columns): "))
-    height = int(input("Enter the desired height (number of rows): "))
+    width = get_integer_input("Enter the desired width (number of columns): ")
+    height = get_integer_input("Enter the desired height (number of rows): ")
     
     # Resize the ASCII art
     resized_art = resize_ascii_art(formatted_art, width, height)
@@ -78,7 +78,7 @@ def main():
     print(resized_art)
 
     # Ask the user if they want to save the ASCII art to a file
-    save_option = input("Do you want to save this ASCII art to a file? (yes/no): ")
+    save_option = get_string_input("Do you want to save this ASCII art to a file? (yes/no): ")
     if save_option.lower() == "yes":
         save_to_file(resized_art)
 

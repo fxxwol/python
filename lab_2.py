@@ -1,3 +1,5 @@
+from utils.input_handling import get_integer_input, get_string_input, get_float_input
+
 class Calculator:
     def __init__(self):
         """
@@ -10,8 +12,8 @@ class Calculator:
         Prompt the user to input two numbers and return them as a tuple.
         """
         try:
-            num1 = float(input("Enter the first number: "))
-            num2 = float(input("Enter the second number: "))
+            num1 = get_float_input("Enter the first number: ")
+            num2 = get_float_input("Enter the second number: ")
             return num1, num2
         except ValueError:
             print("Invalid input for numbers.")
@@ -21,7 +23,7 @@ class Calculator:
         """
         Prompt the user to input an operator and return it.
         """
-        operator = input("Enter operator (+, -, *, /, ^, √, %): ")
+        operator = get_string_input("Enter operator (+, -, *, /, ^, √, %): ")
         if operator not in ['+', '-', '*', '/', '^', '√', '%']:
             print("Invalid operator.")
             return None
@@ -65,7 +67,7 @@ class Calculator:
         """
         while True:
             self.calculate()
-            choice = input("Do you want to perform another calculation? (Yes/No): ")
+            choice = get_string_input("Do you want to perform another calculation? (Yes/No): ")
             if choice.lower() != 'yes':
                 break
 
