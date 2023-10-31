@@ -1,4 +1,4 @@
-def get_float_input(prompt, error_message="Enter right(>0) value: "):
+def get_float_input(prompt, error_message="Enter float value: "):
     while True:
         try:
             value = float(input(prompt))
