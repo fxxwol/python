@@ -1,3 +1,5 @@
+import os
+
 class ArtGenerator:
     def __init__(self, ascii_dict, settings):
         self.ascii_dict = ascii_dict
@@ -43,6 +45,8 @@ class ArtGenerator:
         return color_codes[color] + text + reset_color
         
     def save_to_text_file(self, output_lines, output_file_name):
-        with open(output_file_name, 'w') as file:
+        result_folder = "result"
+        file_path = os.path.join(result_folder, output_file_name)
+        with open(file_path, 'w') as file:
             for line in output_lines:
                 file.write(line + '\n')
