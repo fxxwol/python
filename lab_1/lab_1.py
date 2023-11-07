@@ -44,7 +44,7 @@ def calc_memory(history):
     else:
         print("Memory is empty.")
 
-if __name__ == "__main__":
+def main():
     while True:
         print("Main Menu:")
         print("1. Settings Menu")

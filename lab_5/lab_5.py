@@ -1,4 +1,4 @@
-from figure import *
+from .figure import *
 
 
 def get_character_input():

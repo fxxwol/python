@@ -1,12 +1,11 @@
-from classes.art_generator import ArtGenerator
-from classes.art_settings import Settings
-from classes.interactions import UserInteraction
-from classes.ascii_art import AsciiArt
-from input_handling import get_string_input, get_integer_input, get_yes_no_input
+from .art_generator import ArtGenerator
+from .art_settings import Settings
+from .interactions import UserInteraction
+from .ascii_art import AsciiArt
+from .input_handling import get_string_input, get_integer_input, get_yes_no_input
 import os
-import sys
 
-if __name__ == "__main__":
+def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     symbol_set = {
         "@": os.path.join(script_dir, "art_symbols/dog.txt"),
