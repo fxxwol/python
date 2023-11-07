@@ -19,6 +19,7 @@ def get_integer_input(prompt, error_message="Enter integer value: "):
 def get_string_input(prompt):
     return input(prompt)
 
+
 def get_yes_no_input(prompt):
     while True:
         choice = input(prompt).strip().lower()

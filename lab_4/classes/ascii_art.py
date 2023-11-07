@@ -1,5 +1,5 @@
 class AsciiArt:
-    staticmethod
+    @staticmethod
     def load_ascii_art(file_path):
         ascii_dict = {}
         with open(file_path, "r", encoding="utf-8") as file:

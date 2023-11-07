@@ -1,4 +1,4 @@
-from utils.input_handling import get_integer_input, get_string_input, get_float_input
+from utils.input_handling import get_string_input, get_float_input
 
 class Calculator:
     def __init__(self):
@@ -126,7 +126,7 @@ class HistoryCalculator(Calculator):
         for i, operation in enumerate(self.history, 1):
             print(f"{i}: {operation}")
 
-def main():
+if __name__ == "__main__":
     calc = HistoryCalculator()
     calc.run()
     calc.show_history()
