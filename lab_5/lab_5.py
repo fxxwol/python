@@ -1,6 +1,6 @@
 from .figure import *
 
-
+# Function to get user input for the character representing the shape
 def get_character_input():
     while True:
         character = input("Enter a character to represent in the shape: ")
@@ -9,7 +9,7 @@ def get_character_input():
         else:
             return character
 
-
+# Function to get user input for the color position
 def get_color_position_input():
     while True:
         try:
@@ -21,7 +21,7 @@ def get_color_position_input():
         except ValueError:
             print("You should have entered an integer number!")
 
-
+# Function to get user input for the length of the figure
 def get_length_input():
     while True:
         try:
@@ -33,11 +33,11 @@ def get_length_input():
         except ValueError:
             print("You should have entered an integer number!")
 
-
+# Function to get user input for the scale of the figure
 def get_scale_input():
     while True:
         try:
-            scale = float(input("Enter a scale for figure: "))
+            scale = float(input("Enter a scale for the figure: "))
             if scale <= 0:
                 print("You should have entered a scale greater than 0!")
             else:
@@ -45,10 +45,10 @@ def get_scale_input():
         except ValueError:
             print("You should have entered a float number!")
 
-
+# Define a file to save 3D representation
 representation_3d_file = "cube.txt"
 
-
+# Main function to interact with the user and create 3D figures
 def main():
     is_figure_available: bool = False
     is_3d_representation_available = False
@@ -98,7 +98,6 @@ def main():
                 break
             case _:
                 print("Invalid option!")
-
 
 if __name__ == "__main__":
     main()
