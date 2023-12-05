@@ -8,7 +8,6 @@ class DataVisualizer:
         plt.title(f"Basic Visualization - {column_name}")
         plt.xlabel("Index")
         plt.ylabel(column_name)
-        plt.show()
 
     def advanced_visualizations(self, data):
         plt.figure(figsize=(12, 8))
