@@ -46,5 +46,8 @@ class CalculatorTests(unittest.TestCase):
         self.assertEqual(self.calculator.history, ["5.0 + 7.0 = 12.0"])
 
 
-if __name__ == "__main__":
+def main ():
     unittest.main()
+
+if __name__ == "__main__":
+    main()
