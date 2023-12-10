@@ -1,14 +1,5 @@
 from utils.input_handling import get_integer_input
-
-
-import lab_1.lab_1
-import lab_2.lab_2
-import lab_3.lab_3
-import lab_4.lab_4
-import lab_5.lab_5
-import lab_6.lab_6
-import lab_7.lab_7
-import lab_8.lab_8
+import core
 
 if __name__ == "__main__":
 
@@ -25,20 +16,20 @@ if __name__ == "__main__":
     while True:
         match lab_number:
             case 1:
-                lab_1.lab_1.main()
+                core.lab_1.lab_1.main()
             case 2:
-                lab_2.lab_2.main()
+                core.lab_2.lab_2.main()
             case 3:
-                lab_3.lab_3.main()
+                core.lab_3.lab_3.main()
             case 4:
-                lab_4.lab_4.main()
+                core.lab_4.lab_4.main()
             case 5:
-                lab_5.lab_5.main()
+                core.lab_5.lab_5.main()
             case 6:
-                lab_6.lab_6.main()
+                core.lab_6.lab_6.main()
             case 7:
-                lab_7.lab_7.main()
+                core.lab_7.lab_7.main()
             case 8:
-                lab_8.lab_8.main()
+                core.lab_8.lab_8.main()
             case 0:
                 break
