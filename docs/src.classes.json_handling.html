@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module src.classes.json_handling</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="src.html" class="white">src</a>.<a href="src.classes.html" class="white">classes</a>.json_handling</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:d%3A%5C%D0%BB%D0%B0%D0%B1%D0%B8%5C3%20%D0%BA%D1%83%D1%80%D1%81%5C%D0%BB%D0%B0%D0%B1%D0%B8%5C%D0%BF%D1%96%D1%82%D0%BE%D0%BD%5Cpython%5Csrc%5Cclasses%5Cjson_handling.py">d:\лаби\3 курс\лаби\пітон\python\src\classes\json_handling.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="src.classes.json_handling.html#JSONFlattener">JSONFlattener</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="JSONFlattener">class <strong>JSONFlattener</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">The&nbsp;`<a href="#JSONFlattener">JSONFlattener</a>`&nbsp;class&nbsp;provides&nbsp;methods&nbsp;for&nbsp;flattening&nbsp;JSON&nbsp;data&nbsp;and&nbsp;displaying&nbsp;the&nbsp;flattened&nbsp;results.<br>
+&nbsp;<br>
+Methods:<br>
+-&nbsp;`<a href="#JSONFlattener-flatten_json">flatten_json</a>(json_data:&nbsp;dict,&nbsp;parent_key:&nbsp;str&nbsp;=&nbsp;"",&nbsp;delimiter="_")&nbsp;-&gt;&nbsp;dict`:&nbsp;Flattens&nbsp;nested&nbsp;JSON&nbsp;data.<br>
+-&nbsp;`<a href="#JSONFlattener-display_flattened_json">display_flattened_json</a>(jsons,&nbsp;color_position:&nbsp;int&nbsp;=&nbsp;4)`:&nbsp;Displays&nbsp;flattened&nbsp;JSON&nbsp;data&nbsp;with&nbsp;colorized&nbsp;output.<br>
+&nbsp;<br>
+Usage&nbsp;example:<br>
+&nbsp;<br>
+```python<br>
+json_flattener&nbsp;=&nbsp;<a href="#JSONFlattener">JSONFlattener</a>()<br>
+json_data&nbsp;=&nbsp;{"name":&nbsp;"John",&nbsp;"address":&nbsp;{"city":&nbsp;"New&nbsp;York",&nbsp;"zip":&nbsp;"10001"}}<br>
+flattened_data&nbsp;=&nbsp;json_flattener.<a href="#JSONFlattener-flatten_json">flatten_json</a>(json_data)<br>
+json_flattener.<a href="#JSONFlattener-display_flattened_json">display_flattened_json</a>(flattened_data,&nbsp;color_position=2)<br>
+```<br>
+&nbsp;<br>
+Note:&nbsp;This&nbsp;class&nbsp;is&nbsp;designed&nbsp;to&nbsp;handle&nbsp;JSON&nbsp;flattening&nbsp;and&nbsp;display&nbsp;with&nbsp;colorized&nbsp;output.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Static methods defined here:<br>
+<dl><dt><a name="JSONFlattener-display_flattened_json"><strong>display_flattened_json</strong></a>(jsons, color_position: int = 4)</dt><dd><span class="code">Displays&nbsp;flattened&nbsp;JSON&nbsp;data&nbsp;with&nbsp;colorized&nbsp;output.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;`jsons`:&nbsp;The&nbsp;JSON&nbsp;data&nbsp;to&nbsp;be&nbsp;displayed.<br>
+-&nbsp;`color_position`&nbsp;(int):&nbsp;The&nbsp;position&nbsp;of&nbsp;the&nbsp;color&nbsp;in&nbsp;the&nbsp;ColorProcessor.<br>
+&nbsp;<br>
+Raises:<br>
+-&nbsp;`ValueError`:&nbsp;If&nbsp;the&nbsp;data&nbsp;types&nbsp;or&nbsp;color&nbsp;position&nbsp;are&nbsp;incorrect.<br>
+&nbsp;<br>
+Note:<br>
+-&nbsp;The&nbsp;color&nbsp;position&nbsp;should&nbsp;be&nbsp;an&nbsp;integer&nbsp;between&nbsp;0&nbsp;and&nbsp;the&nbsp;maximum&nbsp;color&nbsp;index.</span></dd></dl>
+
+<dl><dt><a name="JSONFlattener-flatten_json"><strong>flatten_json</strong></a>(json_data: dict, parent_key: str = '', delimiter='_') -&gt; dict</dt><dd><span class="code">Flattens&nbsp;nested&nbsp;JSON&nbsp;data.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;`json_data`&nbsp;(dict):&nbsp;The&nbsp;nested&nbsp;JSON&nbsp;data&nbsp;to&nbsp;be&nbsp;flattened.<br>
+-&nbsp;`parent_key`&nbsp;(str):&nbsp;The&nbsp;parent&nbsp;key&nbsp;used&nbsp;for&nbsp;building&nbsp;the&nbsp;flattened&nbsp;keys.<br>
+-&nbsp;`delimiter`&nbsp;(str):&nbsp;The&nbsp;delimiter&nbsp;used&nbsp;to&nbsp;separate&nbsp;keys&nbsp;in&nbsp;the&nbsp;flattened&nbsp;structure.<br>
+&nbsp;<br>
+Returns:<br>
+dict:&nbsp;The&nbsp;flattened&nbsp;JSON&nbsp;data.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>Fore</strong> = &lt;colorama.ansi.AnsiFore object&gt;</td></tr></table>
+</body></html>

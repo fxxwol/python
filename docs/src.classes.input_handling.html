@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module src.classes.input_handling</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="src.html" class="white">src</a>.<a href="src.classes.html" class="white">classes</a>.input_handling</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:d%3A%5C%D0%BB%D0%B0%D0%B1%D0%B8%5C3%20%D0%BA%D1%83%D1%80%D1%81%5C%D0%BB%D0%B0%D0%B1%D0%B8%5C%D0%BF%D1%96%D1%82%D0%BE%D0%BD%5Cpython%5Csrc%5Cclasses%5Cinput_handling.py">d:\лаби\3 курс\лаби\пітон\python\src\classes\input_handling.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="src.classes.input_handling.html#InputProcessor">InputProcessor</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="InputProcessor">class <strong>InputProcessor</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">The&nbsp;`<a href="#InputProcessor">InputProcessor</a>`&nbsp;class&nbsp;provides&nbsp;methods&nbsp;for&nbsp;obtaining&nbsp;user&nbsp;input&nbsp;with&nbsp;error&nbsp;handling.<br>
+&nbsp;<br>
+Methods:<br>
+-&nbsp;`<a href="#InputProcessor-get_float_input">get_float_input</a>(prompt,&nbsp;error_message="Enter&nbsp;float&nbsp;value:&nbsp;")&nbsp;-&gt;&nbsp;float`:&nbsp;Obtains&nbsp;a&nbsp;float&nbsp;input&nbsp;from&nbsp;the&nbsp;user.<br>
+-&nbsp;`<a href="#InputProcessor-get_integer_input">get_integer_input</a>(prompt,&nbsp;error_message="Enter&nbsp;integer&nbsp;value:&nbsp;")&nbsp;-&gt;&nbsp;int`:&nbsp;Obtains&nbsp;an&nbsp;integer&nbsp;input&nbsp;from&nbsp;the&nbsp;user.<br>
+-&nbsp;`<a href="#InputProcessor-get_string_input">get_string_input</a>(prompt)&nbsp;-&gt;&nbsp;str`:&nbsp;Obtains&nbsp;a&nbsp;string&nbsp;input&nbsp;from&nbsp;the&nbsp;user.<br>
+-&nbsp;`<a href="#InputProcessor-get_yes_no_input">get_yes_no_input</a>(prompt)&nbsp;-&gt;&nbsp;str`:&nbsp;Obtains&nbsp;a&nbsp;yes/no&nbsp;input&nbsp;from&nbsp;the&nbsp;user.<br>
+&nbsp;<br>
+Usage&nbsp;example:<br>
+&nbsp;<br>
+```python<br>
+input_processor&nbsp;=&nbsp;<a href="#InputProcessor">InputProcessor</a>()<br>
+float_value&nbsp;=&nbsp;input_processor.<a href="#InputProcessor-get_float_input">get_float_input</a>("Enter&nbsp;a&nbsp;float&nbsp;value:&nbsp;")<br>
+integer_value&nbsp;=&nbsp;input_processor.<a href="#InputProcessor-get_integer_input">get_integer_input</a>("Enter&nbsp;an&nbsp;integer&nbsp;value:&nbsp;")<br>
+string_value&nbsp;=&nbsp;input_processor.<a href="#InputProcessor-get_string_input">get_string_input</a>("Enter&nbsp;a&nbsp;string:&nbsp;")<br>
+yes_no_choice&nbsp;=&nbsp;input_processor.<a href="#InputProcessor-get_yes_no_input">get_yes_no_input</a>("Do&nbsp;you&nbsp;want&nbsp;to&nbsp;proceed?&nbsp;(yes/no):&nbsp;")<br>
+```<br>
+&nbsp;<br>
+Note:&nbsp;This&nbsp;class&nbsp;is&nbsp;designed&nbsp;to&nbsp;handle&nbsp;float,&nbsp;integer,&nbsp;string,&nbsp;and&nbsp;yes/no&nbsp;inputs&nbsp;with&nbsp;appropriate&nbsp;error&nbsp;messages.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Static methods defined here:<br>
+<dl><dt><a name="InputProcessor-get_float_input"><strong>get_float_input</strong></a>(prompt, error_message='Enter float value: ') -&gt; float</dt><dd><span class="code">Obtains&nbsp;a&nbsp;float&nbsp;input&nbsp;from&nbsp;the&nbsp;user&nbsp;with&nbsp;error&nbsp;handling.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;`prompt`&nbsp;(str):&nbsp;The&nbsp;prompt&nbsp;message&nbsp;displayed&nbsp;to&nbsp;the&nbsp;user.<br>
+-&nbsp;`error_message`&nbsp;(str):&nbsp;The&nbsp;error&nbsp;message&nbsp;displayed&nbsp;if&nbsp;the&nbsp;input&nbsp;is&nbsp;not&nbsp;a&nbsp;float.<br>
+&nbsp;<br>
+Returns:<br>
+float:&nbsp;The&nbsp;float&nbsp;value&nbsp;entered&nbsp;by&nbsp;the&nbsp;user.</span></dd></dl>
+
+<dl><dt><a name="InputProcessor-get_integer_input"><strong>get_integer_input</strong></a>(prompt, error_message='Enter integer value: ') -&gt; int</dt><dd><span class="code">Obtains&nbsp;an&nbsp;integer&nbsp;input&nbsp;from&nbsp;the&nbsp;user&nbsp;with&nbsp;error&nbsp;handling.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;`prompt`&nbsp;(str):&nbsp;The&nbsp;prompt&nbsp;message&nbsp;displayed&nbsp;to&nbsp;the&nbsp;user.<br>
+-&nbsp;`error_message`&nbsp;(str):&nbsp;The&nbsp;error&nbsp;message&nbsp;displayed&nbsp;if&nbsp;the&nbsp;input&nbsp;is&nbsp;not&nbsp;an&nbsp;integer.<br>
+&nbsp;<br>
+Returns:<br>
+int:&nbsp;The&nbsp;integer&nbsp;value&nbsp;entered&nbsp;by&nbsp;the&nbsp;user.</span></dd></dl>
+
+<dl><dt><a name="InputProcessor-get_string_input"><strong>get_string_input</strong></a>(prompt) -&gt; str</dt><dd><span class="code">Obtains&nbsp;a&nbsp;string&nbsp;input&nbsp;from&nbsp;the&nbsp;user.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;`prompt`&nbsp;(str):&nbsp;The&nbsp;prompt&nbsp;message&nbsp;displayed&nbsp;to&nbsp;the&nbsp;user.<br>
+&nbsp;<br>
+Returns:<br>
+str:&nbsp;The&nbsp;string&nbsp;value&nbsp;entered&nbsp;by&nbsp;the&nbsp;user.</span></dd></dl>
+
+<dl><dt><a name="InputProcessor-get_yes_no_input"><strong>get_yes_no_input</strong></a>(prompt) -&gt; str</dt><dd><span class="code">Obtains&nbsp;a&nbsp;yes/no&nbsp;input&nbsp;from&nbsp;the&nbsp;user&nbsp;with&nbsp;error&nbsp;handling.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;`prompt`&nbsp;(str):&nbsp;The&nbsp;prompt&nbsp;message&nbsp;displayed&nbsp;to&nbsp;the&nbsp;user.<br>
+&nbsp;<br>
+Returns:<br>
+str:&nbsp;The&nbsp;user's&nbsp;choice&nbsp;('yes'&nbsp;or&nbsp;'no').</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

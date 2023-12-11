@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module src.classes.ascii_art</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="src.html" class="white">src</a>.<a href="src.classes.html" class="white">classes</a>.ascii_art</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:d%3A%5C%D0%BB%D0%B0%D0%B1%D0%B8%5C3%20%D0%BA%D1%83%D1%80%D1%81%5C%D0%BB%D0%B0%D0%B1%D0%B8%5C%D0%BF%D1%96%D1%82%D0%BE%D0%BD%5Cpython%5Csrc%5Cclasses%5Cascii_art.py">d:\лаби\3 курс\лаби\пітон\python\src\classes\ascii_art.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="src.classes.ascii_art.html#ArtSettings">ArtSettings</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="ArtSettings">class <strong>ArtSettings</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">The&nbsp;`<a href="#ArtSettings">ArtSettings</a>`&nbsp;class&nbsp;provides&nbsp;methods&nbsp;for&nbsp;configuring&nbsp;ASCII&nbsp;art&nbsp;settings.<br>
+&nbsp;<br>
+Methods:<br>
+-&nbsp;`<a href="#ArtSettings-choose_max_width">choose_max_width</a>()`:&nbsp;Allows&nbsp;the&nbsp;user&nbsp;to&nbsp;enter&nbsp;the&nbsp;maximum&nbsp;width&nbsp;for&nbsp;ASCII&nbsp;art.<br>
+-&nbsp;`<a href="#ArtSettings-choose_alignment">choose_alignment</a>()`:&nbsp;Allows&nbsp;the&nbsp;user&nbsp;to&nbsp;select&nbsp;the&nbsp;alignment&nbsp;for&nbsp;ASCII&nbsp;art&nbsp;(left,&nbsp;center,&nbsp;right).<br>
+-&nbsp;`<a href="#ArtSettings-choose_symbol">choose_symbol</a>(prompt="Enter&nbsp;a&nbsp;symbol:&nbsp;")`:&nbsp;Allows&nbsp;the&nbsp;user&nbsp;to&nbsp;enter&nbsp;a&nbsp;symbol&nbsp;fo&nbsp;ASCII&nbsp;art.<br>
+-&nbsp;`<a href="#ArtSettings-choose_color">choose_color</a>()`:&nbsp;Allows&nbsp;the&nbsp;user&nbsp;to&nbsp;select&nbsp;a&nbsp;color&nbsp;for&nbsp;ASCII&nbsp;art.<br>
+-&nbsp;`<a href="#ArtSettings-save_to_file">save_to_file</a>(content)`:&nbsp;Asks&nbsp;the&nbsp;user&nbsp;if&nbsp;they&nbsp;want&nbsp;to&nbsp;save&nbsp;the&nbsp;ASCII&nbsp;art&nbsp;to&nbsp;a&nbsp;file&nbsp;and,&nbsp;if&nbsp;yes,<br>
+&nbsp;&nbsp;&nbsp;prompts&nbsp;for&nbsp;a&nbsp;filename&nbsp;and&nbsp;saves&nbsp;the&nbsp;content&nbsp;to&nbsp;the&nbsp;specified&nbsp;file.<br>
+&nbsp;<br>
+Usage&nbsp;example:<br>
+&nbsp;<br>
+```python<br>
+settings&nbsp;=&nbsp;<a href="#ArtSettings">ArtSettings</a>()<br>
+max_width&nbsp;=&nbsp;settings.<a href="#ArtSettings-choose_max_width">choose_max_width</a>()<br>
+alignment&nbsp;=&nbsp;settings.<a href="#ArtSettings-choose_alignment">choose_alignment</a>()<br>
+symbol&nbsp;=&nbsp;settings.<a href="#ArtSettings-choose_symbol">choose_symbol</a>()<br>
+color&nbsp;=&nbsp;settings.<a href="#ArtSettings-choose_color">choose_color</a>()<br>
+&nbsp;<br>
+#&nbsp;Perform&nbsp;some&nbsp;actions&nbsp;with&nbsp;the&nbsp;chosen&nbsp;settings...<br>
+&nbsp;<br>
+content&nbsp;=&nbsp;"Your&nbsp;ASCII&nbsp;art&nbsp;content&nbsp;here."<br>
+settings.<a href="#ArtSettings-save_to_file">save_to_file</a>(content)<br>
+```<br>
+&nbsp;<br>
+Note:&nbsp;This&nbsp;class&nbsp;relies&nbsp;on&nbsp;the&nbsp;`InputProcessor`,&nbsp;`ColorProcessor`,&nbsp;and&nbsp;`FileProcessor`&nbsp;classes&nbsp;for&nbsp;user&nbsp;input,<br>
+color&nbsp;handling,&nbsp;and&nbsp;file&nbsp;operations,&nbsp;respectively.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Static methods defined here:<br>
+<dl><dt><a name="ArtSettings-choose_alignment"><strong>choose_alignment</strong></a>()</dt><dd><span class="code">Prompt&nbsp;the&nbsp;user&nbsp;to&nbsp;select&nbsp;the&nbsp;alignment&nbsp;for&nbsp;ASCII&nbsp;art&nbsp;(left,&nbsp;center,&nbsp;right).<br>
+&nbsp;<br>
+Returns:<br>
+str:&nbsp;The&nbsp;chosen&nbsp;alignment.<br>
+Raises:<br>
+ValueError:&nbsp;If&nbsp;an&nbsp;invalid&nbsp;alignment&nbsp;is&nbsp;entered.</span></dd></dl>
+
+<dl><dt><a name="ArtSettings-choose_color"><strong>choose_color</strong></a>()</dt><dd><span class="code">Prompt&nbsp;the&nbsp;user&nbsp;to&nbsp;select&nbsp;a&nbsp;color&nbsp;for&nbsp;ASCII&nbsp;art.<br>
+&nbsp;<br>
+Returns:<br>
+int:&nbsp;The&nbsp;chosen&nbsp;color&nbsp;position.<br>
+Raises:<br>
+ValueError:&nbsp;If&nbsp;an&nbsp;invalid&nbsp;color&nbsp;position&nbsp;is&nbsp;entered.</span></dd></dl>
+
+<dl><dt><a name="ArtSettings-choose_max_width"><strong>choose_max_width</strong></a>()</dt><dd><span class="code">Prompt&nbsp;the&nbsp;user&nbsp;to&nbsp;enter&nbsp;the&nbsp;maximum&nbsp;width&nbsp;for&nbsp;ASCII&nbsp;art.<br>
+&nbsp;<br>
+Returns:<br>
+int:&nbsp;The&nbsp;chosen&nbsp;maximum&nbsp;width.</span></dd></dl>
+
+<dl><dt><a name="ArtSettings-choose_symbol"><strong>choose_symbol</strong></a>(prompt='Enter a symbol: ')</dt><dd><span class="code">Prompt&nbsp;the&nbsp;user&nbsp;to&nbsp;enter&nbsp;a&nbsp;symbol&nbsp;for&nbsp;customizing&nbsp;ASCII&nbsp;art.<br>
+&nbsp;<br>
+Parameters:<br>
+prompt&nbsp;(str):&nbsp;Custom&nbsp;prompt&nbsp;for&nbsp;symbol&nbsp;entry.<br>
+&nbsp;<br>
+Returns:<br>
+str:&nbsp;The&nbsp;chosen&nbsp;symbol.</span></dd></dl>
+
+<dl><dt><a name="ArtSettings-save_to_file"><strong>save_to_file</strong></a>(content)</dt><dd><span class="code">Ask&nbsp;the&nbsp;user&nbsp;if&nbsp;they&nbsp;want&nbsp;to&nbsp;save&nbsp;the&nbsp;ASCII&nbsp;art&nbsp;to&nbsp;a&nbsp;file.<br>
+If&nbsp;yes,&nbsp;prompt&nbsp;for&nbsp;a&nbsp;filename&nbsp;and&nbsp;save&nbsp;the&nbsp;content&nbsp;to&nbsp;the&nbsp;specified&nbsp;file.<br>
+&nbsp;<br>
+Parameters:<br>
+content&nbsp;(str):&nbsp;The&nbsp;ASCII&nbsp;art&nbsp;content&nbsp;to&nbsp;be&nbsp;saved.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

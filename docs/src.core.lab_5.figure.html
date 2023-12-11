@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module src.core.lab_5.figure</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="src.html" class="white">src</a>.<a href="src.core.html" class="white">core</a>.<a href="src.core.lab_5.html" class="white">lab_5</a>.figure</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:d%3A%5C%D0%BB%D0%B0%D0%B1%D0%B8%5C3%20%D0%BA%D1%83%D1%80%D1%81%5C%D0%BB%D0%B0%D0%B1%D0%B8%5C%D0%BF%D1%96%D1%82%D0%BE%D0%BD%5Cpython%5Csrc%5Ccore%5Clab_5%5Cfigure.py">d:\лаби\3 курс\лаби\пітон\python\src\core\lab_5\figure.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="colorama.html">colorama</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="abc.html#ABC">abc.ABC</a>(<a href="builtins.html#object">builtins.object</a>)
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="src.core.lab_5.figure.html#Figure3D">Figure3D</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Figure3D">class <strong>Figure3D</strong></a>(<a href="abc.html#ABC">abc.ABC</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Figure3D">Figure3D</a>(character:&nbsp;str,&nbsp;color_position:&nbsp;int)<br>
+&nbsp;<br>
+An&nbsp;abstract&nbsp;base&nbsp;class&nbsp;representing&nbsp;a&nbsp;3D&nbsp;figure.<br>
+&nbsp;<br>
+Attributes:<br>
+-&nbsp;`_character`&nbsp;(str):&nbsp;The&nbsp;character&nbsp;representing&nbsp;the&nbsp;shape.<br>
+-&nbsp;`_color_position`&nbsp;(int):&nbsp;The&nbsp;position&nbsp;of&nbsp;the&nbsp;color&nbsp;in&nbsp;the&nbsp;available&nbsp;colors.<br>
+&nbsp;<br>
+Methods:<br>
+-&nbsp;`<a href="#Figure3D-get_2d_representation">get_2d_representation</a>()&nbsp;-&gt;&nbsp;list`:&nbsp;Abstract&nbsp;method&nbsp;to&nbsp;get&nbsp;the&nbsp;2D&nbsp;representation&nbsp;of&nbsp;the&nbsp;figure.<br>
+-&nbsp;`<a href="#Figure3D-get_3d_representation">get_3d_representation</a>(scale:&nbsp;float&nbsp;=&nbsp;1.0)&nbsp;-&gt;&nbsp;str`:&nbsp;Abstract&nbsp;method&nbsp;to&nbsp;get&nbsp;the&nbsp;3D&nbsp;representation&nbsp;of&nbsp;the&nbsp;figure.<br>
+-&nbsp;`<a href="#Figure3D-is_appropriate_character">is_appropriate_character</a>(character:&nbsp;str)&nbsp;-&gt;&nbsp;bool`:&nbsp;Static&nbsp;method&nbsp;to&nbsp;check&nbsp;if&nbsp;the&nbsp;character&nbsp;is&nbsp;appropriate.<br>
+&nbsp;<br>
+Usage&nbsp;example:<br>
+```python<br>
+class&nbsp;MyFigure(<a href="#Figure3D">Figure3D</a>):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Implement&nbsp;abstract&nbsp;methods&nbsp;here...<br>
+```<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="src.core.lab_5.figure.html#Figure3D">Figure3D</a></dd>
+<dd><a href="abc.html#ABC">abc.ABC</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Figure3D-__init__"><strong>__init__</strong></a>(self, character: str, color_position: int)</dt><dd><span class="code">Initialize&nbsp;a&nbsp;<a href="#Figure3D">Figure3D</a>&nbsp;object&nbsp;with&nbsp;a&nbsp;character&nbsp;and&nbsp;color&nbsp;position.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;`character`&nbsp;(str):&nbsp;The&nbsp;character&nbsp;representing&nbsp;the&nbsp;shape.<br>
+-&nbsp;`color_position`&nbsp;(int):&nbsp;The&nbsp;position&nbsp;of&nbsp;the&nbsp;color&nbsp;in&nbsp;the&nbsp;available&nbsp;colors.<br>
+&nbsp;<br>
+Raises:<br>
+-&nbsp;`ValueError`:&nbsp;If&nbsp;the&nbsp;color&nbsp;position&nbsp;is&nbsp;not&nbsp;in&nbsp;the&nbsp;range&nbsp;of&nbsp;available&nbsp;colors.<br>
+-&nbsp;`ValueError`:&nbsp;If&nbsp;the&nbsp;character&nbsp;is&nbsp;not&nbsp;appropriate&nbsp;(not&nbsp;a&nbsp;single&nbsp;character).</span></dd></dl>
+
+<dl><dt><a name="Figure3D-get_2d_representation"><strong>get_2d_representation</strong></a>(self) -&gt; list</dt><dd><span class="code">Abstract&nbsp;method&nbsp;to&nbsp;get&nbsp;the&nbsp;2D&nbsp;representation&nbsp;of&nbsp;the&nbsp;figure.<br>
+&nbsp;<br>
+Returns:<br>
+list:&nbsp;A&nbsp;list&nbsp;of&nbsp;strings&nbsp;representing&nbsp;the&nbsp;2D&nbsp;representation.<br>
+&nbsp;<br>
+Usage&nbsp;example:<br>
+```python<br>
+class&nbsp;MyFigure(<a href="#Figure3D">Figure3D</a>):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;<a href="#Figure3D-get_2d_representation">get_2d_representation</a>(self)&nbsp;-&gt;&nbsp;list:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Implement&nbsp;the&nbsp;2D&nbsp;representation...<br>
+```</span></dd></dl>
+
+<dl><dt><a name="Figure3D-get_3d_representation"><strong>get_3d_representation</strong></a>(self, scale: float = 1.0) -&gt; str</dt><dd><span class="code">Abstract&nbsp;method&nbsp;to&nbsp;get&nbsp;the&nbsp;3D&nbsp;representation&nbsp;of&nbsp;the&nbsp;figure.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;`scale`&nbsp;(float):&nbsp;The&nbsp;scale&nbsp;factor&nbsp;for&nbsp;the&nbsp;3D&nbsp;representation.<br>
+&nbsp;<br>
+Returns:<br>
+str:&nbsp;A&nbsp;string&nbsp;representing&nbsp;the&nbsp;3D&nbsp;representation.<br>
+&nbsp;<br>
+Usage&nbsp;example:<br>
+```python<br>
+class&nbsp;MyFigure(<a href="#Figure3D">Figure3D</a>):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;<a href="#Figure3D-get_3d_representation">get_3d_representation</a>(self,&nbsp;scale:&nbsp;float&nbsp;=&nbsp;1.0)&nbsp;-&gt;&nbsp;str:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Implement&nbsp;the&nbsp;3D&nbsp;representation...<br>
+```</span></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="Figure3D-is_appropriate_character"><strong>is_appropriate_character</strong></a>(character: str) -&gt; bool</dt><dd><span class="code">Check&nbsp;if&nbsp;the&nbsp;character&nbsp;is&nbsp;appropriate&nbsp;(a&nbsp;single&nbsp;character).<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;`character`&nbsp;(str):&nbsp;The&nbsp;character&nbsp;to&nbsp;check.<br>
+&nbsp;<br>
+Returns:<br>
+bool:&nbsp;True&nbsp;if&nbsp;the&nbsp;character&nbsp;is&nbsp;appropriate,&nbsp;False&nbsp;otherwise.<br>
+&nbsp;<br>
+Usage&nbsp;example:<br>
+```python<br>
+if&nbsp;<a href="#Figure3D">Figure3D</a>.<a href="#Figure3D-is_appropriate_character">is_appropriate_character</a>("A"):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Proceed&nbsp;with&nbsp;the&nbsp;appropriate&nbsp;character...<br>
+```</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset({'get_2d_representation', 'get_3d_representation'})</dl>
+
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>Fore</strong> = &lt;colorama.ansi.AnsiFore object&gt;<br>
+<strong>colors</strong> = {0: 'BLACK', 1: 'BLUE', 2: 'CYAN', 3: 'GREEN', 4: 'LIGHTBLACK_EX', 5: 'LIGHTBLUE_EX', 6: 'LIGHTCYAN_EX', 7: 'LIGHTGREEN_EX', 8: 'LIGHTMAGENTA_EX', 9: 'LIGHTRED_EX', ...}</td></tr></table>
+</body></html>

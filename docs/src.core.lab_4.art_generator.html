@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module src.core.lab_4.art_generator</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="src.html" class="white">src</a>.<a href="src.core.html" class="white">core</a>.<a href="src.core.lab_4.html" class="white">lab_4</a>.art_generator</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:d%3A%5C%D0%BB%D0%B0%D0%B1%D0%B8%5C3%20%D0%BA%D1%83%D1%80%D1%81%5C%D0%BB%D0%B0%D0%B1%D0%B8%5C%D0%BF%D1%96%D1%82%D0%BE%D0%BD%5Cpython%5Csrc%5Ccore%5Clab_4%5Cart_generator.py">d:\лаби\3 курс\лаби\пітон\python\src\core\lab_4\art_generator.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="src.core.lab_4.art_generator.html#ArtGenerator">ArtGenerator</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="ArtGenerator">class <strong>ArtGenerator</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#ArtGenerator">ArtGenerator</a>(ascii_dict,&nbsp;max_width,&nbsp;alignment)<br>
+&nbsp;<br>
+The&nbsp;`<a href="#ArtGenerator">ArtGenerator</a>`&nbsp;class&nbsp;provides&nbsp;methods&nbsp;for&nbsp;generating&nbsp;and&nbsp;displaying&nbsp;ASCII&nbsp;art&nbsp;based&nbsp;on&nbsp;user&nbsp;input.<br>
+&nbsp;<br>
+Methods:<br>
+-&nbsp;`<a href="#ArtGenerator-__init__">__init__</a>(ascii_dict,&nbsp;max_width,&nbsp;alignment)`:&nbsp;Initializes&nbsp;an&nbsp;`<a href="#ArtGenerator">ArtGenerator</a>`&nbsp;<a href="builtins.html#object">object</a>&nbsp;with&nbsp;ASCII&nbsp;dictionary,&nbsp;maximum&nbsp;width,&nbsp;and&nbsp;alignment.<br>
+-&nbsp;`<a href="#ArtGenerator-get_valid_text">get_valid_text</a>()&nbsp;-&gt;&nbsp;str`:&nbsp;Prompts&nbsp;the&nbsp;user&nbsp;to&nbsp;enter&nbsp;a&nbsp;word&nbsp;or&nbsp;phrase,&nbsp;ensuring&nbsp;it&nbsp;contains&nbsp;valid&nbsp;characters.<br>
+-&nbsp;`<a href="#ArtGenerator-print_ascii_art">print_ascii_art</a>(text)&nbsp;-&gt;&nbsp;List[str]`:&nbsp;Generates&nbsp;and&nbsp;displays&nbsp;ASCII&nbsp;art&nbsp;based&nbsp;on&nbsp;the&nbsp;input&nbsp;text.<br>
+&nbsp;<br>
+Usage&nbsp;example:<br>
+&nbsp;<br>
+```python<br>
+ascii_dict&nbsp;=&nbsp;{"A":&nbsp;["&nbsp;&nbsp;A&nbsp;&nbsp;",&nbsp;"&nbsp;A&nbsp;A&nbsp;",&nbsp;"AAAAA",&nbsp;"A&nbsp;&nbsp;&nbsp;A",&nbsp;"A&nbsp;&nbsp;&nbsp;A"]}<br>
+max_width&nbsp;=&nbsp;10<br>
+alignment&nbsp;=&nbsp;"center"<br>
+art_generator&nbsp;=&nbsp;<a href="#ArtGenerator">ArtGenerator</a>(ascii_dict,&nbsp;max_width,&nbsp;alignment)<br>
+user_text&nbsp;=&nbsp;art_generator.<a href="#ArtGenerator-get_valid_text">get_valid_text</a>()<br>
+art_lines&nbsp;=&nbsp;art_generator.<a href="#ArtGenerator-print_ascii_art">print_ascii_art</a>(user_text)<br>
+```<br>
+&nbsp;<br>
+Note:&nbsp;This&nbsp;class&nbsp;is&nbsp;designed&nbsp;to&nbsp;handle&nbsp;ASCII&nbsp;art&nbsp;generation&nbsp;and&nbsp;display&nbsp;with&nbsp;user&nbsp;input&nbsp;validation.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="ArtGenerator-__init__"><strong>__init__</strong></a>(self, ascii_dict, max_width, alignment)</dt><dd><span class="code">Initializes&nbsp;an&nbsp;`<a href="#ArtGenerator">ArtGenerator</a>`&nbsp;<a href="builtins.html#object">object</a>.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;`ascii_dict`&nbsp;(dict):&nbsp;A&nbsp;dictionary&nbsp;containing&nbsp;ASCII&nbsp;representations&nbsp;of&nbsp;symbols.<br>
+-&nbsp;`max_width`&nbsp;(int):&nbsp;The&nbsp;maximum&nbsp;width&nbsp;for&nbsp;the&nbsp;ASCII&nbsp;art.<br>
+-&nbsp;`alignment`&nbsp;(str):&nbsp;The&nbsp;alignment&nbsp;of&nbsp;the&nbsp;ASCII&nbsp;art&nbsp;('left',&nbsp;'center',&nbsp;or&nbsp;'right').</span></dd></dl>
+
+<dl><dt><a name="ArtGenerator-get_valid_text"><strong>get_valid_text</strong></a>(self)</dt><dd><span class="code">Prompts&nbsp;the&nbsp;user&nbsp;to&nbsp;enter&nbsp;a&nbsp;word&nbsp;or&nbsp;phrase,&nbsp;ensuring&nbsp;it&nbsp;contains&nbsp;valid&nbsp;characters.<br>
+&nbsp;<br>
+Returns:<br>
+str:&nbsp;The&nbsp;user-entered&nbsp;text.<br>
+&nbsp;<br>
+Raises:<br>
+ValueError:&nbsp;If&nbsp;the&nbsp;input&nbsp;contains&nbsp;invalid&nbsp;characters.</span></dd></dl>
+
+<dl><dt><a name="ArtGenerator-print_ascii_art"><strong>print_ascii_art</strong></a>(self, text)</dt><dd><span class="code">Generates&nbsp;and&nbsp;displays&nbsp;ASCII&nbsp;art&nbsp;based&nbsp;on&nbsp;the&nbsp;input&nbsp;text.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;`text`&nbsp;(str):&nbsp;The&nbsp;text&nbsp;for&nbsp;which&nbsp;ASCII&nbsp;art&nbsp;is&nbsp;generated&nbsp;and&nbsp;displayed.<br>
+&nbsp;<br>
+Returns:<br>
+List[str]:&nbsp;The&nbsp;lines&nbsp;of&nbsp;the&nbsp;generated&nbsp;ASCII&nbsp;art.<br>
+&nbsp;<br>
+Raises:<br>
+ValueError:&nbsp;If&nbsp;the&nbsp;maximum&nbsp;width&nbsp;is&nbsp;too&nbsp;small&nbsp;for&nbsp;the&nbsp;input&nbsp;phrase.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

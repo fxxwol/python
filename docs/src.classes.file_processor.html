@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module src.classes.file_processor</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="src.html" class="white">src</a>.<a href="src.classes.html" class="white">classes</a>.file_processor</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:d%3A%5C%D0%BB%D0%B0%D0%B1%D0%B8%5C3%20%D0%BA%D1%83%D1%80%D1%81%5C%D0%BB%D0%B0%D0%B1%D0%B8%5C%D0%BF%D1%96%D1%82%D0%BE%D0%BD%5Cpython%5Csrc%5Cclasses%5Cfile_processor.py">d:\лаби\3 курс\лаби\пітон\python\src\classes\file_processor.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="json.html">json</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+</td><td class="multicolumn"><a href="pandas.html">pandas</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="src.classes.file_processor.html#FileProcessor">FileProcessor</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="FileProcessor">class <strong>FileProcessor</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#FileProcessor">FileProcessor</a>(file_path)<br>
+&nbsp;<br>
+The&nbsp;`<a href="#FileProcessor">FileProcessor</a>`&nbsp;class&nbsp;provides&nbsp;methods&nbsp;for&nbsp;reading&nbsp;from&nbsp;and&nbsp;saving&nbsp;data&nbsp;to&nbsp;files,<br>
+specifically&nbsp;designed&nbsp;for&nbsp;handling&nbsp;various&nbsp;types&nbsp;of&nbsp;data&nbsp;such&nbsp;as&nbsp;plain&nbsp;text,&nbsp;JSON,&nbsp;and&nbsp;CSV.<br>
+&nbsp;<br>
+Attributes:<br>
+-&nbsp;`save_file_path`:&nbsp;The&nbsp;full&nbsp;path&nbsp;to&nbsp;the&nbsp;directory&nbsp;where&nbsp;the&nbsp;file&nbsp;will&nbsp;be&nbsp;saved.<br>
+-&nbsp;`file_path`:&nbsp;The&nbsp;relative&nbsp;path&nbsp;to&nbsp;the&nbsp;file&nbsp;being&nbsp;processed.<br>
+&nbsp;<br>
+Methods:<br>
+-&nbsp;`<a href="#FileProcessor-__init__">__init__</a>(self,&nbsp;file_path)`:&nbsp;Initializes&nbsp;a&nbsp;`<a href="#FileProcessor">FileProcessor</a>`&nbsp;<a href="builtins.html#object">object</a>&nbsp;with&nbsp;the&nbsp;provided&nbsp;file&nbsp;path.<br>
+-&nbsp;`<a href="#FileProcessor-save_to_file">save_to_file</a>(self,&nbsp;data)`:&nbsp;Saves&nbsp;data&nbsp;to&nbsp;a&nbsp;plain&nbsp;text&nbsp;file.<br>
+-&nbsp;`<a href="#FileProcessor-read_from_file">read_from_file</a>(self)&nbsp;-&gt;&nbsp;dict`:&nbsp;Reads&nbsp;data&nbsp;from&nbsp;a&nbsp;plain&nbsp;text&nbsp;file&nbsp;and&nbsp;returns&nbsp;it&nbsp;as&nbsp;a&nbsp;dictionary.<br>
+-&nbsp;`<a href="#FileProcessor-save_art_to_file">save_art_to_file</a>(self,&nbsp;data)`:&nbsp;Saves&nbsp;ASCII&nbsp;art&nbsp;data&nbsp;to&nbsp;a&nbsp;plain&nbsp;text&nbsp;file.<br>
+-&nbsp;`<a href="#FileProcessor-write_into_json">write_into_json</a>(self,&nbsp;jsons)`:&nbsp;Writes&nbsp;JSON-formatted&nbsp;data&nbsp;into&nbsp;a&nbsp;file.<br>
+-&nbsp;`<a href="#FileProcessor-csv_load">csv_load</a>(self)&nbsp;-&gt;&nbsp;pd.DataFrame`:&nbsp;Loads&nbsp;data&nbsp;from&nbsp;a&nbsp;CSV&nbsp;file&nbsp;into&nbsp;a&nbsp;Pandas&nbsp;DataFrame.<br>
+&nbsp;<br>
+Usage&nbsp;example:<br>
+&nbsp;<br>
+```python<br>
+file_processor&nbsp;=&nbsp;<a href="#FileProcessor">FileProcessor</a>("example.txt")<br>
+data_to_save&nbsp;=&nbsp;"Hello,&nbsp;World!"<br>
+file_processor.<a href="#FileProcessor-save_to_file">save_to_file</a>(data_to_save)<br>
+&nbsp;<br>
+loaded_data&nbsp;=&nbsp;file_processor.<a href="#FileProcessor-read_from_file">read_from_file</a>()<br>
+print(loaded_data)<br>
+&nbsp;<br>
+json_data&nbsp;=&nbsp;{"key":&nbsp;"value"}<br>
+file_processor.<a href="#FileProcessor-write_into_json">write_into_json</a>(json_data)<br>
+&nbsp;<br>
+csv_data&nbsp;=&nbsp;file_processor.<a href="#FileProcessor-csv_load">csv_load</a>()<br>
+print(csv_data)<br>
+```<br>
+&nbsp;<br>
+Note:&nbsp;This&nbsp;class&nbsp;is&nbsp;designed&nbsp;to&nbsp;handle&nbsp;plain&nbsp;text,&nbsp;JSON,&nbsp;and&nbsp;CSV&nbsp;file&nbsp;operations.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="FileProcessor-__init__"><strong>__init__</strong></a>(self, file_path)</dt><dd><span class="code">Initializes&nbsp;a&nbsp;<a href="#FileProcessor">FileProcessor</a>&nbsp;<a href="builtins.html#object">object</a>&nbsp;with&nbsp;the&nbsp;provided&nbsp;file&nbsp;path.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;`file_path`&nbsp;(str):&nbsp;The&nbsp;relative&nbsp;path&nbsp;to&nbsp;the&nbsp;file&nbsp;being&nbsp;processed.</span></dd></dl>
+
+<dl><dt><a name="FileProcessor-csv_load"><strong>csv_load</strong></a>(self) -&gt; pandas.core.frame.DataFrame</dt><dd><span class="code">Loads&nbsp;data&nbsp;from&nbsp;a&nbsp;CSV&nbsp;file&nbsp;into&nbsp;a&nbsp;Pandas&nbsp;DataFrame.<br>
+&nbsp;<br>
+Returns:<br>
+pd.DataFrame:&nbsp;The&nbsp;loaded&nbsp;data&nbsp;as&nbsp;a&nbsp;Pandas&nbsp;DataFrame.</span></dd></dl>
+
+<dl><dt><a name="FileProcessor-read_from_file"><strong>read_from_file</strong></a>(self) -&gt; dict</dt><dd><span class="code">Reads&nbsp;data&nbsp;from&nbsp;a&nbsp;plain&nbsp;text&nbsp;file&nbsp;and&nbsp;returns&nbsp;it&nbsp;as&nbsp;a&nbsp;dictionary.<br>
+&nbsp;<br>
+Returns:<br>
+dict:&nbsp;The&nbsp;data&nbsp;read&nbsp;from&nbsp;the&nbsp;file&nbsp;as&nbsp;a&nbsp;dictionary.<br>
+None:&nbsp;If&nbsp;an&nbsp;error&nbsp;occurs&nbsp;during&nbsp;file&nbsp;reading.</span></dd></dl>
+
+<dl><dt><a name="FileProcessor-save_art_to_file"><strong>save_art_to_file</strong></a>(self, data)</dt><dd><span class="code">Saves&nbsp;ASCII&nbsp;art&nbsp;data&nbsp;to&nbsp;a&nbsp;plain&nbsp;text&nbsp;file.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;`data`&nbsp;(list):&nbsp;List&nbsp;of&nbsp;ASCII&nbsp;art&nbsp;lines&nbsp;to&nbsp;be&nbsp;saved.</span></dd></dl>
+
+<dl><dt><a name="FileProcessor-save_to_file"><strong>save_to_file</strong></a>(self, data)</dt><dd><span class="code">Saves&nbsp;data&nbsp;to&nbsp;a&nbsp;plain&nbsp;text&nbsp;file.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;`data`&nbsp;(str):&nbsp;The&nbsp;data&nbsp;to&nbsp;be&nbsp;saved.</span></dd></dl>
+
+<dl><dt><a name="FileProcessor-write_into_json"><strong>write_into_json</strong></a>(self, jsons)</dt><dd><span class="code">Writes&nbsp;JSON-formatted&nbsp;data&nbsp;into&nbsp;a&nbsp;file.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;`jsons`&nbsp;(dict):&nbsp;The&nbsp;data&nbsp;to&nbsp;be&nbsp;written&nbsp;in&nbsp;JSON&nbsp;format.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

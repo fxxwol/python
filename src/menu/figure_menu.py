@@ -1,3 +1,4 @@
+from src.core.lab_5.cube import Cube
 from src.classes.input_handling import InputProcessor
 from src.classes.ascii_art import ArtSettings
 from src.core.lab_5.figure import *
