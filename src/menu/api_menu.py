@@ -1,17 +1,15 @@
-from art_menu import ArtMenu
 import sys
 import os
-from core.lab_7.services import DisplayInTableService, UserService
-
+from src.core.lab_7.services import DisplayInTableService, UserService
 sys.path.append(os.getcwd())
-import utils.json_handling as json_processor
-import utils.colors_handling as color_processor
-from utils.input_handling import get_string_input
+import src.utils.json_handling as json_processor
+import src.utils.colors_handling as color_processor
+from src.utils.input_handling import get_string_input
 import json
-from classes.file_processor import FileProcessor
+from src.classes.file_processor import FileProcessor
 
 
-class DataDisplayMenu(ArtMenu):
+class DataDisplayMenu:
     def __init__(self):
         self.history = []
         self.successful_result = False

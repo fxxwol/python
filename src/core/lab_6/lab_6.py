@@ -2,17 +2,12 @@ import unittest
 from unittest.mock import patch
 import sys
 from importlib.machinery import SourceFileLoader
+from src.core.lab_2.lab_2 import HistoryCalculator
 
-sys.path.append(r"D:\Лаби\3 курс\Лаби\Пітон\python")
-
-lab2_module = SourceFileLoader(
-    "calculator",
-    r"D:\Лаби\3 курс\Лаби\Пітон\python\lab_2\lab_2.py",
-).load_module()
 
 class CalculatorTests(unittest.TestCase):
     def setUp(self):
-        self.calculator = lab2_module.HistoryCalculator()
+        self.calculator = HistoryCalculator()
 
     @patch("builtins.input", side_effect=[5, 3, "+"])
     def test_addition(self, mock_input):

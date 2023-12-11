@@ -1,5 +1,5 @@
 from colorama import Fore
-from . import colors_handling as color_processor
+import src.utils.colors_handling as color_processor
 
 def flatten_json(json_data: dict, parent_key: str = "", delimiter="_"):
     if (

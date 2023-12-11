@@ -1,4 +1,4 @@
-from data_analyzer import DataAnalyzer
+from src.core.lab_8.data_analyzer import DataAnalyzer
 import os
 
 current_directory = os.path.dirname(os.path.abspath(__file__))

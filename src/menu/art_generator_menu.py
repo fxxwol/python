@@ -1,10 +1,13 @@
-
-from core.lab_4.art_generator import ArtGenerator
-from core.lab_4.art_settings import Settings
-from core.lab_4.ascii_art import AsciiArt
-from core.lab_4.interactions import UserInteraction
-from menu.art_menu import ArtMenu
-from utils.input_handling import get_string_input, get_integer_input, get_yes_no_input
+from src.core.lab_4.art_generator import ArtGenerator
+from src.core.lab_4.art_settings import Settings
+from src.core.lab_4.ascii_art import AsciiArt
+from src.core.lab_4.interactions import UserInteraction
+from src.menu.art_menu import ArtMenu
+from src.utils.input_handling import (
+    get_string_input,
+    get_integer_input,
+    get_yes_no_input,
+)
 import os
 
 
@@ -71,4 +74,3 @@ class AsciiArtGeneratorMenu(ArtMenu):
 
             else:
                 print("Invalid option!")
-

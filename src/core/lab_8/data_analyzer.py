@@ -1,14 +1,11 @@
-from data_exploration import DataExploration
-from classes.file_processor import FileProcessor
-from visualization import DataVisualizer
-from data_processing import DataPreprocessing
-from exporter import DataExporter
+from src.core.lab_8.data_exploration import DataExploration
+from src.classes.file_processor import FileProcessor
+from src.core.lab_8.visualization import DataVisualizer
+from src.core.lab_8.data_processing import DataPreprocessing
+from src.core.lab_8.exporter import DataExporter
 import os
 
-file_path = os.path.join(
-    os.path.dirname(__file__), "..", "src", "results", "exported_visualization.png"
-)
-
+file_path=os.path.join(os.getcwd(), "src", "results", "exported_diagram.png" )
 
 class DataAnalyzer:
     def __init__(self, csv_file_path):

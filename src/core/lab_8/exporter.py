@@ -13,7 +13,7 @@ class DataExporter:
             ax.set_xlabel("Index")
             ax.set_ylabel(column_name)
             fig.savefig(filename)
-            plt.close(fig) 
             print(f"Visualization exported as {filename}")
+            plt.close(fig) 
         else:
             print(f"Error: Column {column_name} not found in the dataset.")

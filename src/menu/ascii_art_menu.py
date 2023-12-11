@@ -1,6 +1,7 @@
-from menu.art_menu import ArtMenu
+from src.menu.art_menu import ArtMenu
 import pyfiglet
 from termcolor import colored
+
 
 class AsciiArtMenu(ArtMenu):
     def run(self):

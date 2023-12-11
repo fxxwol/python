@@ -1,6 +1,5 @@
 import os
 
-
 class ArtGenerator:
     def __init__(self, ascii_dict, settings):
         self.ascii_dict = ascii_dict

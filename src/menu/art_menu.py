@@ -1,4 +1,6 @@
-from classes.file_processor import FileProcessor
+from src.classes.file_processor import FileProcessor
+
+
 class ArtMenu:
     @staticmethod
     def get_option():

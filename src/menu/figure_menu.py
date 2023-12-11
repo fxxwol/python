@@ -1,5 +1,5 @@
-from core.lab_5.figure import Cube
-from menu.art_menu import ArtMenu
+from src.core.lab_5.figure import Cube
+from src.menu.art_menu import ArtMenu
 
 
 class FigureMenu(ArtMenu):

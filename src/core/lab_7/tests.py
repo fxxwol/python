@@ -1,6 +1,6 @@
 import unittest
 
-from services import UserService
+from src.core.lab_7.services import UserService
 
 
 class UserServiceCalculator(unittest.TestCase):

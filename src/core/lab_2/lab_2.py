@@ -1,5 +1,5 @@
-from classes.calculator import Calculator
-from menu.calculator_menu import CalculatorMenu
+from src.classes.calculator import Calculator
+from src.menu.calculator_menu import CalculatorMenu
 
 
 class HistoryCalculator(Calculator):

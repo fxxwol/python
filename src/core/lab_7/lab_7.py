@@ -1,6 +1,8 @@
-from menu.api_menu import DataDisplayMenu
+from src.menu.api_menu import DataDisplayMenu
 
-
-if __name__ == "__main__":
+def main():
     data_display_menu = DataDisplayMenu()
     data_display_menu.run()
+
+if __name__ == "__main__":
+    main()

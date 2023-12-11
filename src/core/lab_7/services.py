@@ -3,7 +3,7 @@ import json
 import requests
 from prettytable import PrettyTable
 
-import config as config
+import src.core.lab_7.config as config
 import regex
 
 
