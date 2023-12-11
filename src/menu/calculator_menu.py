@@ -5,7 +5,11 @@ class CalculatorMenu:
         self.calculator = calculator_class()
 
     def calc_memory(self):
-        self.calculator.show_history()
+        if hasattr(self.calculator, "show_history"):
+            self.calculator.show_history()
+        else:
+            print("This calculator doesn't support history")
+            
 
     def main_menu(self):
         while True:

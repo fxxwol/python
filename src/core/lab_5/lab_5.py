@@ -3,8 +3,8 @@ from src.core.lab_5.figure import *
 
 
 def main():
-    cube_menu = FigureMenu()
-    cube_menu.run()
+    menu = FigureMenu()
+    menu.run()
 
 
 if __name__ == "__main__":

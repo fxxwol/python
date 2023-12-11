@@ -19,21 +19,20 @@ class DataDisplayMenu:
     def display_personal_profile(self, linkedin_url):
         try:
             self.jsons = UserService.get_personal_profile(linkedin_url)
-            print("Choose an option:")
             print("1. Display data in a flattened way")
             print("2. Display data in JSON format")
             print("3. Display data in a table")
+            option = InputProcessor.get_integer_input("Choose an option:")
             while True:
-                option = self.get_option()
-                if option == "1":
+                if option == 1:
                     ColorProcessor.display_colors()
                     color_position = int(input("Enter a color position: "))
                     JSONFlattener.display_flattened_json(self.jsons, color_position)
                     break
-                elif option == "2":
+                elif option == 2:
                     print(json.dumps(self.jsons, indent=4))
                     break
-                elif option == "3":
+                elif option == 3:
                     print(
                         DisplayInTableService.display_personal_profile(
                             json.dumps(self.jsons, indent=4)
@@ -53,21 +52,20 @@ class DataDisplayMenu:
     def display_profiles_posts(self, linkedin_url):
         try:
             self.jsons = UserService.get_profiles_posts(linkedin_url)
-            print("Choose an option:")
             print("1. Display data in a flattened way")
             print("2. Display data in JSON format")
             print("3. Display data in a table")
+            option = InputProcessor.get_integer_input("Choose an option:")
             while True:
-                option = self.get_option()
-                if option == "1":
+                if option == 1:
                     ColorProcessor.display_colors()
                     color_position = int(input("Enter a color position: "))
                     JSONFlattener.display_flattened_json(self.jsons, color_position)
                     break
-                elif option == "2":
+                elif option == 2:
                     print(json.dumps(self.jsons, indent=4))
                     break
-                elif option == "3":
+                elif option == 3:
                     print(
                         DisplayInTableService.display_profiles_posts(
                             json.dumps(self.jsons, indent=4)
@@ -104,25 +102,24 @@ class DataDisplayMenu:
 
     def run(self):
         while True:
-            print("Choose an option:")
             print("1. Display data of a personal profile")
             print("2. Display data of profiles posts")
             print("3. Save data in JSON format")
-            print("4 - Show history")
-            print("0 - Exit")
+            print("4. - Show history")
+            print("0. - Exit")
+            option = InputProcessor.get_integer_input("Choose an option:")
 
-            option = self.get_option()
-            if option == "1":
+            if option == 1:
                 linkedin_url = input("Enter LinkedIn URL: ")
                 self.display_personal_profile(linkedin_url)
-            elif option == "2":
+            elif option == 2:
                 linkedin_url = input("Enter LinkedIn URL: ")
                 self.display_profiles_posts(linkedin_url)
-            elif option == "3":
+            elif option == 3:
                 self.save_data_to_json()
-            elif option == "4":
+            elif option == 4:
                 self.display_history()
-            elif option == "0":
+            elif option == 0:
                 exit(0)
             else:
                 print("Invalid option. Enter again!")
