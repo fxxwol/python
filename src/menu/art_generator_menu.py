@@ -14,7 +14,6 @@ class ArtGeneratorMenu:
             "*": os.path.join(root, "src/core/lab_4/art_symbols/asterisk.txt"),
         }
         self.ascii_art = None
-        self.settings = None
 
     def select_symbol(self):
         while True:
