@@ -7,7 +7,7 @@ from requests import JSONDecodeError
 class FileProcessor:
     def __init__(self, file_path):
         self.save_file_path = os.path.join(
-            os.path.dirname(__file__), "..", "src", "results", file_path
+            os.getcwd(), "src", "results", "exported_diagram.png"
         )
         self.file_path = file_path
 

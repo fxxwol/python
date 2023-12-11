@@ -1,10 +1,11 @@
 import sys
 import os
 from src.core.lab_7.services import DisplayInTableService, UserService
+
 sys.path.append(os.getcwd())
-import src.utils.json_handling as json_processor
-import src.utils.colors_handling as color_processor
-from src.utils.input_handling import get_string_input
+from src.classes.json_handling import JSONFlattener
+from src.classes.colors_handling import ColorProcessor
+from src.classes.input_handling import InputProcessor
 import json
 from src.classes.file_processor import FileProcessor
 
@@ -25,9 +26,9 @@ class DataDisplayMenu:
             while True:
                 option = self.get_option()
                 if option == "1":
-                    color_processor.display_colors()
+                    ColorProcessor.display_colors()
                     color_position = int(input("Enter a color position: "))
-                    json_processor.display_flattened_json(self.jsons, color_position)
+                    JSONFlattener.display_flattened_json(self.jsons, color_position)
                     break
                 elif option == "2":
                     print(json.dumps(self.jsons, indent=4))
@@ -59,9 +60,9 @@ class DataDisplayMenu:
             while True:
                 option = self.get_option()
                 if option == "1":
-                    color_processor.display_colors()
+                    ColorProcessor.display_colors()
                     color_position = int(input("Enter a color position: "))
-                    json_processor.display_flattened_json(self.jsons, color_position)
+                    JSONFlattener.display_flattened_json(self.jsons, color_position)
                     break
                 elif option == "2":
                     print(json.dumps(self.jsons, indent=4))
@@ -86,7 +87,7 @@ class DataDisplayMenu:
     def save_data_to_json(self):
         if self.successful_result:
             try:
-                filename = get_string_input("Enter file name:")
+                filename = InputProcessor.get_string_input("Enter file name:")
                 file_processor = FileProcessor(filename)
                 file_processor.write_into_json(self.jsons)
             except Exception as e:
