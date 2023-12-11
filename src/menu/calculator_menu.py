@@ -1,5 +1,5 @@
 from core.lab_2.lab_2 import HistoryCalculator
-from utils.input_handling import get_float_input, get_integer_input, get_string_input
+from utils.input_handling import get_string_input
 
 class CalculatorMenu:
     def __init__(self, calculator_class):
